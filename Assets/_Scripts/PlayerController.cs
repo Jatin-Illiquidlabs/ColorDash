@@ -27,6 +27,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform cubesSpawnPos = null;
     private int cubesIndex = 0;
 
+    [Header("Ability Data")]
+    [SerializeField] private GameObject shieldObject;
+    [SerializeField] private float maxBatteryCapacity;
+    [SerializeField] private float batteryCharge;
+    private bool bHasShield = false;
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -176,6 +185,13 @@ public class PlayerController : MonoBehaviour
 
         if (other.CompareTag("Obstacle"))
         {
+            if (bHasShield)
+            {
+                bHasShield = false;
+                shieldObject.SetActive(false);
+                return;
+            }
+
             Debug.LogError("Game Over");
         }
 
@@ -185,10 +201,30 @@ public class PlayerController : MonoBehaviour
 
             Destroy(other.gameObject);
         }
+
     }
 
-    public void RestartLevel()
+
+    public void UpgradeAbility(AbilityTypes _type)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        switch (_type)
+        {
+            case AbilityTypes.Speed:
+                speed += 1f;
+                break;
+
+            case AbilityTypes.Battery:
+                batteryCharge += 1f;
+
+                if (batteryCharge >= maxBatteryCapacity)
+                    batteryCharge = maxBatteryCapacity;
+
+                break;
+
+            case AbilityTypes.Shield:
+                bHasShield = true;
+                shieldObject.SetActive(true);
+                break;
+        }
     }
 }

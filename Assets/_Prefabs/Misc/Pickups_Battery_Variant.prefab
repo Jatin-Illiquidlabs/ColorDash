@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5826848850617895650
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 133696725127109884, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_text
+      value: Battery
+      objectReference: {fileID: 0}
+    - target: {fileID: 356521715799219873, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: abilityType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 674368674470821641, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 674368674470821641, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.247579
+      objectReference: {fileID: 0}
+    - target: {fileID: 674368674470821641, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.241706
+      objectReference: {fileID: 0}
+    - target: {fileID: 674368674470821641, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.2825747
+      objectReference: {fileID: 0}
+    - target: {fileID: 674368674470821641, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 674368674470821641, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 674368674470821641, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 674368674470821641, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 674368674470821641, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 674368674470821641, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 674368674470821641, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698247045806360519, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698247045806360519, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.32156864
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698247045806360519, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698247045806360519, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987456044210871537, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.25490198
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987456044210871537, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987456044210871537, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094789637347755596, guid: 9e8391b753471aa4f9d233361f35f169,
+        type: 3}
+      propertyPath: m_Name
+      value: Pickups_Battery_Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e8391b753471aa4f9d233361f35f169, type: 3}
