@@ -34,6 +34,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] float inbetweenTime;
 
+    [Header("Drone Wings")]
+    [SerializeField] private GameObject propelor1;
+    [SerializeField] private GameObject propelor2;
+    [SerializeField] private GameObject propelor3;
+    [SerializeField] private GameObject propelor4;
+
     [Header("Ability Data")]
     [SerializeField] private GameObject shieldObject;
     [SerializeField] private float maxBatteryCapacity;
@@ -63,6 +69,11 @@ public class PlayerController : MonoBehaviour
     {
         if (bIsGameover)
             return;
+
+        propelor1.transform.DOLocalRotate(propelor1.transform.eulerAngles + new Vector3(0, 50, 0f), .2f);
+        propelor2.transform.DOLocalRotate(propelor2.transform.eulerAngles + new Vector3(0, 50, 0f), .2f);
+        propelor3.transform.DOLocalRotate(propelor3.transform.eulerAngles + new Vector3(0, 50, 0f), .2f);
+        propelor4.transform.DOLocalRotate(propelor4.transform.eulerAngles + new Vector3(0, 50, 0f), .2f);
 
 #if UNITY_EDITOR
 
