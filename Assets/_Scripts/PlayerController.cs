@@ -1,5 +1,7 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,7 +27,12 @@ public class PlayerController : MonoBehaviour
     [Header("Cubes Data")]
     [SerializeField] private GameObject cubePrefab = null;
     [SerializeField] private Transform cubesSpawnPos = null;
+    [SerializeField] private float cubeHolderOffset;
     private int cubesIndex = 0;
+    [SerializeField] List<GameObject> cubesList = new List<GameObject>();
+    [SerializeField] Transform dropPoint;
+    [SerializeField] float moveSpeed;
+    [SerializeField] float inbetweenTime;
 
     [Header("Ability Data")]
     [SerializeField] private GameObject shieldObject;
@@ -47,6 +54,8 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("IsMoving", false);
         }
+
+        dropPoint = GameObject.FindGameObjectWithTag("DropPoint").transform;
     }
 
     // Update is called once per frame
@@ -138,11 +147,14 @@ public class PlayerController : MonoBehaviour
     {
         //transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
 
-        GameObject _NewCube = Instantiate(cubePrefab, cubesSpawnPos.position, Quaternion.identity);
+        GameObject _NewCube = Instantiate(cubePrefab, cubesSpawnPos.position, Quaternion.Euler(-90f,0,0));
+
         _NewCube.transform.SetParent(transform);
 
         cubesSpawnPos.transform.position = new Vector3(cubesSpawnPos.transform.position.x,
-            cubesSpawnPos.transform.position.y + cubePrefab.transform.localScale.y, cubesSpawnPos.transform.position.z);
+            cubesSpawnPos.transform.position.y + cubeHolderOffset, cubesSpawnPos.transform.position.z);
+
+        cubesList.Add(_NewCube);
 
         cubesIndex++;
     }
@@ -202,6 +214,16 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
         }
 
+        if (other.CompareTag("Finish"))
+        {
+            if (bLevelCompelete)
+                return;
+
+            bLevelCompelete = true;
+
+            StartCoroutine(removeAll());
+        }
+
     }
 
 
@@ -226,5 +248,24 @@ public class PlayerController : MonoBehaviour
                 shieldObject.SetActive(true);
                 break;
         }
+    }
+
+    IEnumerator removeAll()
+    {
+        Debug.Log("MADARCHOD");
+
+        cubesList.Reverse();
+        foreach (GameObject obj in cubesList)
+        {
+            MoveOBject(obj);
+            yield return new WaitForSeconds(inbetweenTime);
+        }
+    }
+
+    void MoveOBject(GameObject obj)
+    {
+        //obj.transform.SetParent(null);
+        obj.transform.DOMove(dropPoint.position, moveSpeed);
+        Destroy(obj, moveSpeed + .15f);
     }
 }

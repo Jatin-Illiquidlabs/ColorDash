@@ -112,7 +112,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.8, y: 0.13}
+  m_SizeDelta: {x: 1.1334, y: 0.13}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &4498834855285938956
 CanvasRenderer:
@@ -251,7 +251,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.97, y: 0.97}
+  m_SizeDelta: {x: 1.2, y: 0.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4476497255699060872
 Canvas:
@@ -419,7 +419,7 @@ Transform:
   m_GameObject: {fileID: 6032781536389559301}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 95}
+  m_LocalScale: {x: 100, y: 125, z: 95}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8555983289956103416}
@@ -581,7 +581,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.2, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &356521715799219873
 MonoBehaviour:
@@ -633,7 +633,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.8, y: 0.13}
+  m_SizeDelta: {x: 1.2, y: 0.13}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &4554391440070492317
 CanvasRenderer:
